@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">FinGregator</string>
+
+    <!-- Login -->
+    <string name="title_activity_login">Log In</string>
+
+    <!-- Error -->
+    <string name="label_error">Error</string>
+</resources>
