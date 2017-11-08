@@ -1,9 +1,17 @@
 <resources>
     <string name="app_name">FinGregator</string>
 
+    <!-- Common -->
+    <string name="common_loading">Loading&#8230;</string>
+    <string name="common_ok">OKAY</string>
+
     <!-- Login -->
     <string name="title_activity_login">Log In</string>
+    <string name="label_use_fingerprint">Use the fingerprint sensor on your device to authenticate.</string>
+    <string name="content_desc_fingerprint">Fingerprint Authentication</string>
+    <string name="label_alternate_pin">Alternatively, enter PIN to gain access.</string>
 
     <!-- Error -->
-    <string name="label_error">Error</string>
+    <string name="error_title">Error</string>
+    <string name="error_incorrect_pin">The PIN you entered is not correct.</string>
 </resources>

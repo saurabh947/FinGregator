@@ -1,5 +1,6 @@
 package com.saurabh.fingregator.ui.activities;
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -7,6 +8,7 @@ import android.support.annotation.Nullable;
 import android.support.annotation.StringRes;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.inputmethod.InputMethodManager;
 
 import com.saurabh.fingregator.R;
 import com.saurabh.fingregator.ui.dialogs.CommonAlertDialog;
@@ -23,6 +25,13 @@ public class BaseActivity extends AppCompatActivity {
 
         mCommonAlertDialog = new CommonAlertDialog();
         mCommonProgressDialog = new CommonProgressDialog();
+    }
+
+    protected void hideSoftKeyboard() {
+        InputMethodManager imm = (InputMethodManager)getSystemService(Context.INPUT_METHOD_SERVICE);
+        if (getCurrentFocus() != null) {
+            imm.hideSoftInputFromWindow(getCurrentFocus().getWindowToken(), 0);
+        }
     }
 
     //region Progress Dialog
@@ -71,7 +80,7 @@ public class BaseActivity extends AppCompatActivity {
         if (mCommonAlertDialog == null) {
             return;
         }
-        mCommonAlertDialog.show(this, R.string.label_error, message, android.R.string.ok, null);
+        mCommonAlertDialog.show(this, R.string.error_title, message, R.string.common_ok, null);
     }
 
     //endregion

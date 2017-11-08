@@ -1,7 +1,43 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/bg_login"
+    android:orientation="vertical">
 
+    <TextView
+        style="@style/Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="center"
+        android:text="@string/label_use_fingerprint" />
+
+    <ImageView
+        android:id="@+id/image_fingerprint"
+        android:layout_width="@dimen/image_fingerprint_width"
+        android:layout_height="@dimen/image_fingerprint_height"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin"
+        android:contentDescription="@string/content_desc_fingerprint"
+        tools:src="@drawable/fingerprint_lock" />
+
+    <TextView
+        style="@style/Label"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_large"
+        android:gravity="center"
+        android:text="@string/label_alternate_pin" />
+
+    <EditText
+        android:id="@+id/text_login_pin"
+        android:layout_width="@dimen/text_login_pin_width"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/margin"
+        android:gravity="center"
+        android:inputType="numberPassword" />
 </LinearLayout>
