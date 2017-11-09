@@ -1,5 +1,6 @@
 package com.saurabh.fingregator.ui.activities;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.text.Editable;
@@ -56,6 +57,7 @@ public class LoginActivity extends BaseActivity {
                 if (pin.equals("11111")) {
                     dismissProgressDialog();
                     // TODO: Move to next screen
+                    startActivity(new Intent(LoginActivity.this, LinkAccountsActivity.class));
                 } else {
                     dismissProgressDialog();
                     showErrorDialog(getString(R.string.error_incorrect_pin));

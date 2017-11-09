@@ -25,5 +25,9 @@
             </intent-filter>
         </activity>
 
+        <activity
+            android:name=".ui.activities.LinkAccountsActivity"
+            android:theme="@style/AppTheme.NoActionBar" />
+
     </application>
 </manifest>
